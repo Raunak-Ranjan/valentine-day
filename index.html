@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Valentine's Day - For Titli 🦋</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Nunito:wght@400;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    
+    <style>
+        :root {
+            --bg-pink: #ffeef2;
+            --white: #ffffff;
+            --primary-red: #c2185b;
+            --title-orange: #ff7043;
+            --text-dark: #4e342e;
+            --text-light: #795548;
+            --timeline-line: #ff8a80;
+            --shadow: rgba(255, 182, 193, 0.4);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: var(--bg-pink);
+            color: var(--text-dark);
+            overflow-x: hidden;
+            background: linear-gradient(180deg, #fce4ec 0%, #ffeef2 100%);
+        }
+
+        /* --- Typography & Container --- */
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3rem;
+            color: var(--title-orange);
+            margin-bottom: 5px;
+            line-height: 1.2;
+            padding: 0 10px;
+        }
+        
+        .section-icon {
+            font-size: 2rem;
+            vertical-align: middle;
+            color: var(--title-orange);
+            display: inline-block;
+            animation: bounceIcon 2s infinite ease-in-out;
+        }
+
+        @keyframes bounceIcon {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        .subtitle {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 25px;
+            font-style: italic;
+            padding: 0 15px;
+        }
+
+        /* --- Buttons --- */
+        .btn-primary {
+            background-color: var(--primary-red);
+            color: white;
+            border: none;
+            padding: 14px 35px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(194, 24, 91, 0.3);
+            transition: transform 0.2s;
+            max-width: 90%;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary:active {
+            transform: scale(0.95);
+        }
+
+        /* --- Header Section --- */
+        header {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background: radial-gradient(circle at 50% 50%, #f8bbd0, #fce4ec, #f8bbd0);
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        .cloud {
+            position: absolute;
+            background: #ffffff;
+            opacity: 0.6;
+            border-radius: 50%;
+            filter: blur(20px);
+            animation: floatCloud 25s infinite linear;
+            z-index: 1;
+        }
+
+        @keyframes floatCloud {
+            from { transform: translateX(-120%); }
+            to { transform: translateX(120vw); }
+        }
+
+        header h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(3.5rem, 12vw, 5.5rem);
+            background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            margin: 10px 0;
+            z-index: 2;
+            line-height: 1.1;
+            animation: fadeInUp 1.2s ease-out;
+        }
+
+        header .sub-header {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: clamp(1rem, 4vw, 1.5rem);
+            margin: 10px 0;
+            z-index: 2;
+            padding: 0 10px;
+            animation: fadeInUp 1.2s ease-out 0.3s backwards;
+        }
+
+        header .tagline {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2rem;
+            color: #d81b60;
+            margin-bottom: 30px;
+            z-index: 2;
+            animation: fadeInUp 1.2s ease-out 0.6s backwards;
+        }
+
+        header .heart-3d {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            filter: drop-shadow(0 5px 15px rgba(233, 30, 99, 0.4));
+            animation: beat 2s infinite, popIn 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 2;
+        }
+
+        @keyframes beat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        @keyframes popIn {
+            0% { transform: scale(0); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- Animation Utilities --- */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .reveal-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- Letter Section --- */
+        .letter-box {
+            display: none;
+            background: #fff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px var(--shadow);
+            margin-top: 30px;
+            text-align: left;
+            border: 2px solid #ffcdd2;
+            position: relative;
+        }
+
+        .letter-box.open-animation {
+            animation: openLetter 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        @keyframes openLetter {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        
+        /* --- Reasons Grid --- */
+        .reasons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .reason-card {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            display: flex;
+            align-items: center;
+            text-align: left;
+            border: 1px solid #fff0f5;
+            gap: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .reason-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 20px rgba(255, 182, 193, 0.3);
+        }
+
+        .reason-emoji {
+            font-size: 2rem;
+            flex-shrink: 0;
+            transition: transform 0.3s;
+        }
+        
+        .reason-card:hover .reason-emoji {
+            transform: rotate(10deg) scale(1.1);
+        }
+
+        .reason-text {
+            font-size: 1rem;
+            line-height: 1.4;
+            color: #5d4037;
+        }
+
+        /* --- Timeline --- */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 10px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: 2px;
+            background-color: var(--timeline-line);
+            top: 0;
+            bottom: 0;
+            transform: translateX(-50%);
+            animation: growLine 2s ease-out forwards;
+            transform-origin: top;
+        }
+
+        @keyframes growLine {
+            from { transform: translateX(-50%) scaleY(0); }
+            to { transform: translateX(-50%) scaleY(1); }
+        }
+
+        .timeline-node {
+            position: relative;
+            margin-bottom: 40px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            width: 16px;
+            height: 16px;
+            background-color: #d81b60;
+            border-radius: 50%;
+            transform: translateX(-50%);
+            top: 20px;
+            z-index: 2;
+            border: 3px solid #fff;
+            box-shadow: 0 0 0 4px rgba(216, 27, 96, 0.1);
+        }
+
+        .timeline-card {
+            width: 45%;
+            background: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            position: relative;
+            transition: transform 0.3s;
+        }
+        
+        .timeline-card:hover {
+            transform: scale(1.02);
+        }
+
+        .timeline-node:nth-child(odd) .timeline-card {
+            margin-right: auto; 
+            margin-left: 0;
+            text-align: right;
+        }
+        
+        .timeline-node:nth-child(even) .timeline-card {
+            margin-left: auto;
+            margin-right: 0;
+            text-align: left;
+        }
+
+        /* --- Quiz Section --- */
+        .quiz-box {
+            background: #fff;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            border-radius: 20px;
+            padding: 30px 20px;
+            box-shadow: 0 10px 30px rgba(255, 182, 193, 0.2);
+            transition: height 0.3s;
+        }
+
+        .quiz-btn {
+            background: #fce4ec;
+            border: none;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: left;
+            font-size: 1rem;
+            color: #5d4037;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            transition: all 0.2s;
+            display: block;
+            position: relative;
+        }
+
+        .quiz-btn:active {
+            transform: scale(0.98);
+        }
+
+        .quiz-feedback {
+            margin-top: 15px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-align: center;
+            min-height: 30px;
+            font-family: 'Nunito', sans-serif;
+            animation: fadeInUp 0.5s ease;
+        }
+
+        /* --- Playlist --- */
+        .playlist-wrapper {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .song-item {
+            background: #fff;
+            padding: 15px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            transition: transform 0.2s;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+
+        .song-item:hover {
+            transform: translateX(5px);
+            border-color: #ff8a80;
+        }
+        
+        .song-item.active {
+            border: 2px solid #c2185b;
+            background-color: #fff0f5;
+        }
+        
+        .song-item.active .music-icon-box {
+            background-color: #c2185b;
+            color: white;
+        }
+
+        .song-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-align: left;
+        }
+
+        .music-icon-box {
+            background: #efebe9;
+            color: #5c6bc0;
+            width: 40px;
+            height: 40px;
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            transition: 0.3s;
+        }
+        
+        /* Visualizer Animation */
+        .visualizer {
+            display: flex;
+            gap: 3px;
+            align-items: flex-end;
+            height: 20px;
+        }
+        
+        .bar {
+            width: 3px;
+            background: #ff8a80;
+            height: 5px;
+            transition: height 0.2s;
+        }
+        
+        .song-item.active .bar {
+            animation: dance 0.6s infinite ease-in-out alternate;
+        }
+        .song-item.active .bar:nth-child(1) { animation-delay: 0.0s; }
+        .song-item.active .bar:nth-child(2) { animation-delay: 0.2s; }
+        .song-item.active .bar:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes dance {
+            0% { height: 5px; }
+            100% { height: 20px; }
+        }
+
+        /* --- Countdown --- */
+        .countdown-grid {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .time-card {
+            background: #fff;
+            width: 70px;
+            height: 80px;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 5px 15px rgba(233, 30, 99, 0.15);
+            border: 1px solid #ffebee;
+            transition: transform 0.3s;
+        }
+        
+        .time-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* --- Promises --- */
+        .promise-card {
+            background: linear-gradient(to right, #fff, #fff0f5);
+            padding: 15px;
+            border-radius: 10px;
+            font-style: italic;
+            border-left: 3px solid #ffccbc;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+            transition: transform 0.3s;
+        }
+
+        .promise-card:hover {
+            transform: translateX(10px);
+            background: #fff;
+        }
+
+        /* --- Valentine Proposal Section --- */
+        .proposal-box {
+            background: #fff;
+            padding: 40px 20px;
+            border-radius: 30px;
+            box-shadow: 0 10px 40px rgba(216, 27, 96, 0.2);
+            margin-top: 60px;
+            border: 3px solid #f8bbd0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .proposal-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .btn-yes {
+            background-color: #00c853;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.3rem;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0, 200, 83, 0.3);
+            transition: transform 0.2s;
+        }
+        
+        .btn-yes:active { transform: scale(0.9); }
+
+        .btn-no {
+            background-color: #ff5252;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.3rem;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(255, 82, 82, 0.3);
+            transition: all 0.2s;
+            position: relative;
+        }
+
+        /* --- Footer --- */
+        .footer-box {
+            background: #fff0f5;
+            padding: 40px 20px;
+            margin-top: 60px;
+            border-radius: 30px 30px 0 0;
+            position: relative;
+        }
+
+        /* --- MOBILE MEDIA QUERY --- */
+        @media (max-width: 768px) {
+            h2 { font-size: 2.5rem; }
+            .subtitle { margin-bottom: 20px; }
+            .reasons-grid { grid-template-columns: 1fr; }
+
+            .timeline::before { left: 20px; animation: none; height: 100%; transform: none; }
+            .timeline-dot { left: 20px; }
+            .timeline-card {
+                width: calc(100% - 50px);
+                margin-left: 50px !important;
+                margin-right: 0 !important;
+                text-align: left !important;
+            }
+            .timeline-node { flex-direction: column; align-items: flex-start; }
+            
+            .quiz-box { padding: 20px 15px; }
+            .promise-card { font-size: 1rem; padding: 12px; }
+            .footer-box h3 { font-size: 2rem !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <audio id="bg-music" src="bg-music.mp3" loop></audio>
+    <audio id="audio-click" src="click.mp3"></audio>
+    <audio id="audio-correct" src="correct.mp3"></audio>
+    <audio id="audio-wrong" src="wrong.mp3"></audio>
+    
+    <audio id="song-1" src="song1.mp3"></audio>
+    <audio id="song-2" src="song2.mp3"></audio>
+    <audio id="song-3" src="song3.mp3"></audio>
+    <audio id="song-4" src="song4.mp3"></audio>
+    <audio id="song-5" src="song5.mp3"></audio>
+    <audio id="song-6" src="song6.mp3"></audio>
+    <audio id="song-7" src="song7.mp3"></audio>
+    <audio id="song-8" src="song8.mp3"></audio>
+
+    <header>
+        <div class="cloud" style="width: 180px; height: 180px; top: 5%; left: -40px;"></div>
+        <div class="cloud" style="width: 120px; height: 120px; top: 65%; right: -20px;"></div>
+        
+        <div class="heart-3d">💖</div>
+        <h1>Happy Valentine's Day</h1>
+        <div class="sub-header">To the most beautiful soul in my universe</div>
+        <div class="tagline">This one's for you, my love 🌹</div>
+        
+        <button class="btn-primary" onclick="document.getElementById('letter').scrollIntoView({behavior:'smooth'})">
+            Scroll Down for Surprises ✨
+        </button>
+    </header>
+
+    <div class="container">
+
+        <section id="letter" class="reveal-on-scroll" style="margin-top: 40px;">
+            <h2>A Letter For You</h2> <span class="section-icon">💌</span>
+            <br>
+            <button class="btn-primary" style="margin-top: 15px; font-family: 'Great Vibes', cursive; font-size: 1.4rem;" onclick="toggleLetter()">
+                Tap to Open My Letter
+            </button>
+            
+            <div class="letter-box" id="letter-content">
+                <p style="font-size: 1rem; line-height: 1.6; color: #4e342e;">
+                    <strong>My Dearest Titli 🦋,</strong><br><br>
+                    From the moment you walked into my life, everything changed. The colors got brighter, the music got sweeter, and my heart found its home.<br><br>
+                    You are my first thought in the morning and my last smile at night. Every moment with you feels like a beautiful dream I never want to wake up from.<br><br>
+                    You make my world complete. Your laugh is my favorite melody, your eyes are my favorite view, and your heart is my favorite place to be.<br><br>
+                    I promise to love you more with every heartbeat, to cherish every second we share, and to always be your safe place.<br><br>
+                    <strong>Forever & Always Yours,<br>Luckily 💕</strong>
+                </p>
+            </div>
+        </section>
+
+        <section class="reveal-on-scroll" style="margin-top: 60px;">
+            <h2>Reasons I Love You</h2> <span class="section-icon">🧡</span>
+            <div class="subtitle">(just a few... the full list would crash the internet 😉)</div>
+
+            <div class="reasons-grid">
+                <div class="reason-card reveal-item"><div class="reason-emoji">😊</div><div class="reason-text">Your smile lights up my entire world</div></div>
+                <div class="reason-card reveal-item"><div class="reason-emoji">🤗</div><div class="reason-text">The way you hug me like I'm the only person alive</div></div>
+                <div class="reason-card reveal-item"><div class="reason-emoji">😂</div><div class="reason-text">Your laugh that makes everything better</div></div>
+                <div class="reason-card reveal-item"><div class="reason-emoji">💪</div><div class="reason-text">How strong and brave you are, always</div></div>
+                <div class="reason-card reveal-item"><div class="reason-emoji">🎨</div><div class="reason-text">The beautiful way you see the world</div></div>
+                <div class="reason-card reveal-item"><div class="reason-emoji">🌙</div><div class="reason-text">Late night talks that feel like magic</div></div>
+                <div class="reason-card reveal-item"><div class="reason-emoji">🍳</div><div class="reason-text">The little things you do just to make me smile</div></div>
+                <div class="reason-card reveal-item"><div class="reason-emoji">💃</div><div class="reason-text">Your vibe — it's unmatched, truly</div></div>
+                <div class="reason-card reveal-item"><div class="reason-emoji">🧠</div><div class="reason-text">How smart and thoughtful you are</div></div>
+                <div class="reason-card reveal-item"><div class="reason-emoji">👑</div><div class="reason-text">You're my queen, my best friend, my everything</div></div>
+                <div class="reason-card reveal-item"><div class="reason-emoji">🫶</div><div class="reason-text">Your kindness that makes the world kinder</div></div>
+                <div class="reason-card reveal-item"><div class="reason-emoji">✨</div><div class="reason-text">Just being YOU — that's reason enough forever</div></div>
+            </div>
+        </section>
+
+        <section class="reveal-on-scroll" style="margin-top: 60px;">
+            <h2>Our Love Story</h2> <span class="section-icon">💫</span>
+            
+            <div class="timeline">
+                <div class="timeline-node reveal-item"><div class="timeline-dot"></div><div class="timeline-card"><div style="font-size: 1.5rem; margin-bottom:5px;">👀</div><div style="font-size: 0.75rem; color:#888; letter-spacing:1px; margin-bottom:5px;">THE BEGINNING</div><h4 style="font-family:'Playfair Display', serif; margin-bottom:8px;">First Met</h4><p style="font-size: 0.9rem;">The day my world changed forever. One look and I knew.</p></div></div>
+                <div class="timeline-node reveal-item"><div class="timeline-dot"></div><div class="timeline-card"><div style="font-size: 1.5rem; margin-bottom:5px;">💬</div><div style="font-size: 0.75rem; color:#888; letter-spacing:1px; margin-bottom:5px;">SOON AFTER</div><h4 style="font-family:'Playfair Display', serif; margin-bottom:8px;">First Conversation</h4><p style="font-size: 0.9rem;">We talked for hours and it felt like minutes.</p></div></div>
+                <div class="timeline-node reveal-item"><div class="timeline-dot"></div><div class="timeline-card"><div style="font-size: 1.5rem; margin-bottom:5px;">🦋</div><div style="font-size: 0.75rem; color:#888; letter-spacing:1px; margin-bottom:5px;">GETTING CLOSE</div><h4 style="font-family:'Playfair Display', serif; margin-bottom:8px;">First Butterflies</h4><p style="font-size: 0.9rem;">My heart skipped beats I didn't know existed.</p></div></div>
+                <div class="timeline-node reveal-item"><div class="timeline-dot"></div><div class="timeline-card"><div style="font-size: 1.5rem; margin-bottom:5px;">❤️</div><div style="font-size: 0.75rem; color:#888; letter-spacing:1px; margin-bottom:5px;">THE MOMENT</div><h4 style="font-family:'Playfair Display', serif; margin-bottom:8px;">Fell In Love</h4><p style="font-size: 0.9rem;">Completely, hopelessly, beautifully in love with you.</p></div></div>
+                <div class="timeline-node reveal-item"><div class="timeline-dot"></div><div class="timeline-card"><div style="font-size: 1.5rem; margin-bottom:5px;">🌟</div><div style="font-size: 0.75rem; color:#888; letter-spacing:1px; margin-bottom:5px;">ALWAYS & FOREVER</div><h4 style="font-family:'Playfair Display', serif; margin-bottom:8px;">Every Day Since</h4><p style="font-size: 0.9rem;">Falling deeper in love with you, one day at a time.</p></div></div>
+            </div>
+        </section>
+
+        <section class="reveal-on-scroll" style="margin-top: 60px;">
+            <h2>Love Quiz</h2> <span class="section-icon">💘</span>
+            <div class="subtitle">Let's see if you know how much I love you!</div>
+
+            <div class="quiz-box reveal-item">
+                <div id="quiz-container">
+                    </div>
+                <div id="quiz-feedback" class="quiz-feedback"></div>
+            </div>
+        </section>
+
+        <section class="reveal-on-scroll" style="margin-top: 60px;">
+            <h2>Our Love Playlist</h2> <span class="section-icon">🎧</span>
+            <div class="subtitle">Tap a song to play/pause 💕</div>
+
+            <div class="playlist-wrapper">
+                <div class="song-item reveal-item" onclick="toggleMusic(1, this)">
+                    <div class="song-left"><div class="music-icon-box">🎵</div><div><h4>Tum Ho Toh</h4><p style="font-size:0.8rem; color:#888;">Vishal Mishra</p></div></div>
+                    <div class="visualizer"><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
+                </div>
+                 <div class="song-item reveal-item" onclick="toggleMusic(2, this)">
+                    <div class="song-left"><div class="music-icon-box">🎶</div><div><h4>Dooron Dooron</h4><p style="font-size:0.8rem; color:#888;">Paresh Pahuja</p></div></div>
+                    <div class="visualizer"><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
+                </div>
+                <div class="song-item reveal-item" onclick="toggleMusic(3, this)">
+                    <div class="song-left"><div class="music-icon-box">🎵</div><div><h4>Khuda Bhi</h4><p style="font-size:0.8rem; color:#888;">Mohit Chauhan</p></div></div>
+                    <div class="visualizer"><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
+                </div>
+                 <div class="song-item reveal-item" onclick="toggleMusic(4, this)">
+                    <div class="song-left"><div class="music-icon-box">🎶</div><div><h4>Vaaroon</h4><p style="font-size:0.8rem; color:#888;">Romy</p></div></div>
+                    <div class="visualizer"><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
+                </div>
+                 <div class="song-item reveal-item" onclick="toggleMusic(5, this)">
+                    <div class="song-left"><div class="music-icon-box">🎵</div><div><h4>Arz Kiya Hai</h4><p style="font-size:0.8rem; color:#888;">Anuv Jain</p></div></div>
+                    <div class="visualizer"><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
+                </div>
+                 <div class="song-item reveal-item" onclick="toggleMusic(6, this)">
+                    <div class="song-left"><div class="music-icon-box">🎶</div><div><h4>Tere Hawaale</h4><p style="font-size:0.8rem; color:#888;">Arijit Singh</p></div></div>
+                    <div class="visualizer"><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
+                </div>
+                 <div class="song-item reveal-item" onclick="toggleMusic(7, this)">
+                    <div class="song-left"><div class="music-icon-box">🎵</div><div><h4>Barbaad</h4><p style="font-size:0.8rem; color:#888;">Jubin Nautiyal</p></div></div>
+                    <div class="visualizer"><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
+                </div>
+                 <div class="song-item reveal-item" onclick="toggleMusic(8, this)">
+                    <div class="song-left"><div class="music-icon-box">🎶</div><div><h4>Dekha Hi Nahi</h4><p style="font-size:0.8rem; color:#888;">Osho Jain</p></div></div>
+                    <div class="visualizer"><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="reveal-on-scroll" style="margin-top: 60px;">
+            <h2>Countdown to V-Day</h2> <span class="section-icon">⏰</span>
+            <div class="subtitle">Every second closer to celebrating our love 💖</div>
+
+            <div class="countdown-grid">
+                <div class="time-card reveal-item"><div class="time-num" id="days" style="font-size:1.5rem; font-weight:bold; color:#c2185b;">00</div><div style="font-size:0.7rem; text-transform:uppercase;">DAYS</div></div>
+                <div class="time-card reveal-item"><div class="time-num" id="hours" style="font-size:1.5rem; font-weight:bold; color:#c2185b;">00</div><div style="font-size:0.7rem; text-transform:uppercase;">HOURS</div></div>
+                <div class="time-card reveal-item"><div class="time-num" id="minutes" style="font-size:1.5rem; font-weight:bold; color:#c2185b;">00</div><div style="font-size:0.7rem; text-transform:uppercase;">MINS</div></div>
+                <div class="time-card reveal-item"><div class="time-num" id="seconds" style="font-size:1.5rem; font-weight:bold; color:#c2185b;">00</div><div style="font-size:0.7rem; text-transform:uppercase;">SECS</div></div>
+            </div>
+        </section>
+
+        <section class="reveal-on-scroll" style="margin-top: 60px;">
+            <h2>My Promises To You</h2> <span class="section-icon">💍</span>
+            <div class="subtitle">Cross my heart and hope to love you forever ❤️</div>
+
+            <div style="display: flex; flex-direction: column; gap: 10px; max-width: 700px; margin: 0 auto;">
+                <div class="promise-card reveal-item">"To always make you laugh, even on your worst days 😄"</div>
+                <div class="promise-card reveal-item">"To hold your hand through every storm 🌧️"</div>
+                <div class="promise-card reveal-item">"To be your biggest fan, always cheering you on 📣"</div>
+                <div class="promise-card reveal-item">"To surprise you with love when you least expect it 🎁"</div>
+                <div class="promise-card reveal-item">"To grow old together and still look at you like it's the first time 👴👵"</div>
+                <div class="promise-card reveal-item">"To love you a little more every single day, forever 💕"</div>
+            </div>
+        </section>
+
+        <section class="reveal-on-scroll" style="margin-top: 60px;">
+            <div class="proposal-box">
+                <div style="font-size: 3rem; animation: beat 1s infinite;">❤️</div>
+                <h2 style="font-family: 'Great Vibes', cursive; font-size: 3.5rem; margin: 20px 0;">One Last Question...</h2>
+                <p style="font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: bold; color: #5d4037;">Will You Be My Valentine?</p>
+                
+                <div class="proposal-buttons">
+                    <button class="btn-yes" onclick="acceptProposal()">YES! 💖</button>
+                    <button class="btn-no" id="noBtn" onmouseover="moveButton()" onclick="moveButton()">no 😢</button>
+                </div>
+                
+                <div id="proposal-response" style="display:none; margin-top:20px; font-size:1.5rem; color:#d81b60; font-family:'Great Vibes', cursive;"></div>
+            </div>
+        </section>
+
+        <div class="footer-box reveal-on-scroll">
+            <h2>You Are My Forever</h2>
+            <p style="font-family:'Playfair Display',serif; font-size:1.1rem; margin:10px 0; padding:0 10px;">In every universe, in every lifetime, in every story...</p>
+            <h3 style="font-family:'Great Vibes', cursive; color:#d81b60; font-size:2.2rem; margin-bottom:30px;">I'd choose YOU every single time 💕</h3>
+            
+            <div style="background:#fff; padding:30px 20px; border-radius:20px; max-width:500px; margin:0 auto; box-shadow:0 10px 30px rgba(0,0,0,0.05);">
+                <div style="font-family:'Great Vibes', cursive; color:#c2185b; font-size:2rem; margin-bottom:10px;">I Love You</div>
+                <p style="margin:5px 0;">More than all the stars in the sky ⭐</p>
+                <p style="margin:5px 0;">More than all the waves in the sea 🌊</p>
+                <p style="margin:5px 0;">More than words could ever express 💌</p>
+                <p style="margin:5px 0;">More than you'll ever know 💖</p>
+            </div>
+
+            <p style="margin-top:30px; font-size:0.8rem; color:#888;">Made with all my love, just for you 🌹</p>
+        </div>
+
+    </div>
+
+    <script>
+        
+        // --- 1. GLOBAL SOUND EFFECTS ---
+        // Play 'click' sound on ANY button click
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const clickSound = document.getElementById('audio-click');
+                clickSound.currentTime = 0;
+                clickSound.play().catch(e => console.log("Audio play error (user interaction required):", e));
+            });
+        });
+
+        // Helper functions for specific sounds
+        function playCorrect() {
+            const sound = document.getElementById('audio-correct');
+            sound.currentTime = 0;
+            sound.play();
+        }
+
+        function playWrong() {
+            const sound = document.getElementById('audio-wrong');
+            sound.currentTime = 0;
+            sound.play();
+        }
+
+        // --- 2. MUSIC PLAYER LOGIC ---
+        let currentPlayingId = null;
+
+        function toggleMusic(id, element) {
+            const audioId = `song-${id}`;
+            const audioElement = document.getElementById(audioId);
+            
+            // Stop whatever else is playing
+            if (currentPlayingId && currentPlayingId !== audioId) {
+                const prevAudio = document.getElementById(currentPlayingId);
+                prevAudio.pause();
+                prevAudio.currentTime = 0;
+                document.querySelectorAll('.song-item').forEach(el => el.classList.remove('active'));
+            }
+
+            // Play or Pause selected
+            if (audioElement.paused) {
+                const playPromise = audioElement.play();
+                
+                if (playPromise !== undefined) {
+                    playPromise.then(_ => {
+                        element.classList.add('active');
+                        currentPlayingId = audioId;
+                    })
+                    .catch(error => {
+                        alert("⚠️ Audio file not found! Please make sure you added song" + id + ".mp3 to the folder.");
+                    });
+                }
+            } else {
+                audioElement.pause();
+                element.classList.remove('active');
+                currentPlayingId = null;
+            }
+        }
+
+        // --- 3. UI ANIMATION LOGIC ---
+        // Letter Toggle
+        function toggleLetter() {
+            const letter = document.getElementById('letter-content');
+            if(letter.style.display === 'block') {
+                letter.style.display = 'none';
+            } else {
+                letter.style.display = 'block';
+                letter.classList.add('open-animation');
+                setTimeout(() => {
+                    letter.scrollIntoView({behavior: 'smooth', block: 'center'});
+                }, 100);
+            }
+        }
+
+        // Scroll Reveal (Intersection Observer)
+        document.addEventListener("DOMContentLoaded", function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        
+                        const children = entry.target.querySelectorAll('.reveal-item');
+                        children.forEach((child, index) => {
+                            setTimeout(() => {
+                                child.classList.add('is-visible');
+                                child.style.opacity = 1;
+                                child.style.transform = 'translateY(0)';
+                            }, index * 100);
+                        });
+
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal-on-scroll').forEach(section => {
+                observer.observe(section);
+            });
+            
+            document.querySelectorAll('.reveal-item').forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(20px)';
+                item.style.transition = 'all 0.6s cubic-bezier(0.5, 0, 0, 1)';
+            });
+        });
+
+        // --- 4. QUIZ LOGIC ---
+        const quizData = [
+            { q: "What's the best thing about us? 💑", options: ["Everything!", "Our vibes", "The love", "All of the above"], correct: 3 },
+            { q: "How much do I love you? 💕", options: ["A lot", "To the moon", "Infinity × Infinity", "More than words"], correct: 2 },
+            { q: "What's my favorite thing about you? 🥰", options: ["Your smile", "Your heart", "Your energy", "EVERYTHING about you"], correct: 3 },
+            { q: "Will I ever stop loving you? 🤔", options: ["Maybe?", "Probably not", "Never ever", "Not even in a million lifetimes"], correct: 3 },
+            { q: "Who's the prettiest person in the world? 👸", options: ["Some celebrity", "IDK", "Not sure", "YOU, obviously!"], correct: 3 }
+        ];
+
+        let currentQIndex = 0;
+
+        function loadQuiz() {
+            const container = document.getElementById('quiz-container');
+            const feedbackEl = document.getElementById('quiz-feedback');
+            const data = quizData[currentQIndex];
+            
+            feedbackEl.innerText = ""; // Clear feedback
+            
+            let buttonsHtml = '';
+            data.options.forEach((opt, idx) => {
+                buttonsHtml += `<button class="quiz-btn" onclick="checkAnswer(this, ${idx})">${opt}</button>`;
+            });
+
+            container.innerHTML = `
+                <div style="font-size:0.9rem; color:#999; margin-bottom:10px;">Question ${currentQIndex + 1} of ${quizData.length}</div>
+                <div style="font-family:'Playfair Display', serif; font-size:1.3rem; margin-bottom:20px;">${data.q}</div>
+                <div>${buttonsHtml}</div>
+            `;
+        }
+
+        function checkAnswer(btn, idx) {
+            const data = quizData[currentQIndex];
+            const allBtns = document.querySelectorAll('.quiz-btn');
+            const feedbackEl = document.getElementById('quiz-feedback');
+            
+            if (idx === data.correct) {
+                // Correct
+                btn.style.backgroundColor = '#d81b60'; 
+                btn.style.color = '#fff';
+                btn.style.transform = 'scale(1.02)';
+                
+                feedbackEl.innerHTML = "Correct! You know me so well! 😍";
+                feedbackEl.style.color = "#d81b60"; 
+                playCorrect();
+            } else {
+                // Wrong
+                btn.style.backgroundColor = '#ff7043'; 
+                btn.style.color = '#fff';
+                
+                // Show right answer
+                allBtns[data.correct].style.backgroundColor = '#d81b60';
+                allBtns[data.correct].style.color = '#fff';
+                
+                feedbackEl.innerHTML = "Oops! But I still love you! 😜";
+                feedbackEl.style.color = "#ff7043";
+                playWrong();
+            }
+
+            allBtns.forEach(b => b.disabled = true);
+
+            setTimeout(() => {
+                currentQIndex++;
+                if (currentQIndex < quizData.length) {
+                    loadQuiz();
+                } else {
+                    document.getElementById('quiz-container').innerHTML = `
+                        <div style="text-align: center; padding: 20px; animation: popIn 0.8s;">
+                            <div style="font-size: 3rem; margin-bottom: 20px;">🎉</div>
+                            <h3 style="font-family: 'Great Vibes', cursive; font-size: 2.2rem; color: #c2185b;">Perfect Score!</h3>
+                            <p>You know us perfectly. I love you! ❤️</p>
+                        </div>
+                    `;
+                    feedbackEl.innerText = "";
+                }
+            }, 1500);
+        }
+        
+        loadQuiz();
+
+        // --- 5. PROPOSAL LOGIC ---
+        function moveButton() {
+            const btn = document.getElementById('noBtn');
+            // Random position within a safe range so it doesn't fly off screen
+            const x = Math.floor(Math.random() * 200) - 100;
+            const y = Math.floor(Math.random() * 200) - 100;
+            
+            btn.style.transform = `translate(${x}px, ${y}px)`;
+        }
+
+        function acceptProposal() {
+            // Trigger Confetti
+            confetti({
+                particleCount: 150,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+            
+            const responseDiv = document.getElementById('proposal-response');
+            responseDiv.style.display = 'block';
+            responseDiv.innerHTML = "Yay! I knew you'd say YES! ❤️🦋";
+            
+            document.querySelector('.proposal-buttons').style.display = 'none';
+            playCorrect(); // Happy sound
+        }
+
+        // --- 6. COUNTDOWN LOGIC ---
+        function updateCountdown() {
+            const now = new Date();
+            const currentYear = now.getFullYear();
+            let vDay = new Date(`February 14, ${currentYear} 00:00:00`);
+
+            if (now > vDay) {
+                vDay = new Date(`February 14, ${currentYear + 1} 00:00:00`);
+            }
+
+            const diff = vDay - now;
+            
+            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const m = Math.floor((diff / 1000 / 60) % 60);
+            const s = Math.floor((diff / 1000) % 60);
+
+            document.getElementById('days').innerText = d < 10 ? '0' + d : d;
+            document.getElementById('hours').innerText = h < 10 ? '0' + h : h;
+            document.getElementById('minutes').innerText = m < 10 ? '0' + m : m;
+            document.getElementById('seconds').innerText = s < 10 ? '0' + s : s;
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+    </script>
+</body>
+</html>
